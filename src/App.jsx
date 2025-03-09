@@ -1,14 +1,9 @@
-import React from 'react'
-import Home from './pages/Home/Home'
-import Navbar from './components/Navbar/Navbar'
+import {RouterProvider } from 'react-router-dom'
+import router from './Router/Router';
 
 const App = () => {
-  return (
-    <div>
-      <Navbar/>
-    {/* <Home/> */}
-    </div>
-  )
+
+  return <RouterProvider router={router}/>;
 }
 
 export default App
