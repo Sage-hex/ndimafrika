@@ -1,8 +1,10 @@
 import React from 'react'
+import Hero from '../../components/Hero/Hero'
 
 const Home = () => {
   return (
-    <section>
+    <section className=' w-full h-screen '>
+      <Hero/>
       
     </section>
   )
