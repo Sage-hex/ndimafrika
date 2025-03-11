@@ -15,22 +15,47 @@
 
 
 
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { useNavigate } from "react-router-dom";
+import CameraControlHook from "../../hooks/CameraControlHook/CameraControlHook";
+
+
+
+// const CameraController = ({ 
+//   azimuthalFactor = 0.5,
+//   polarFactor = 0.1,
+//   polarAngleOffset = Math.PI / 2,
+//   enableZoom = false,
+//   enableRotate = true,
+//   orbitControlsProps = {}}) => {
+
+
+//   const orbitRef = useRef();
+//   const mouse = useRef({x:0, y:0});
+
+//   useEffect(() => {
+
+//     const handleMouseMove (event) => {
+
+//     }
+
+//   }, [])
+// }
 
 const Hero = () => {
   const navigate = useNavigate();
 
   return (
     <section className="w-full h-screen relative">
-      <Canvas camera={{ position: [0, 0, 2] }}>
+      <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
         <Suspense fallback={null}>
           {/* Load Panorama EXR Environment */}
           <Environment files="/textures/heroBackground.exr" background />
         </Suspense>
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
+        {/* <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} /> */}
+        <CameraControlHook autoRotate={false}/>
       </Canvas>
       
       {/* CTA Buttons */}
