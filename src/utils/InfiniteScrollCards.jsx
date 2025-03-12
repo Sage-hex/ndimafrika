@@ -52,7 +52,8 @@ function InfiniteScrollCards() {
     });
   
     return (
-      <div ref={containerRef} className="overflow-hidden w-full bg-green-900 py-10 cursor-grab active:cursor-grabbing">
+      <div ref={containerRef} className="overflow-hidden w-full bg-Earthy-Brown py-20 cursor-grab active:cursor-grabbing">
+        
         <motion.div
           className="flex gap-6 min-w-max"
           style={{ x }}
@@ -65,7 +66,11 @@ function InfiniteScrollCards() {
               <img src={src} alt={`Slide ${index}`} className="rounded-xl w-full h-auto" />
             </div>
           ))}
+
+          
         </motion.div>
+
+        
       </div>
     );
   }

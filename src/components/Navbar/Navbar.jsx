@@ -113,7 +113,7 @@ const Navbar = () => {
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <nav className="w-full md:w-[90%] flex justify-between items-center h-[60px] py-2 px-6 md:px-20 mx-auto">
+      <nav className="w-full lg:w-[90%] flex justify-between items-center h-[60px] py-2 px-6 lg:px-20 mx-auto">
         {/* Logo Section */}
         <div className="flex items-center bg-Earthy-Brown rounded-[50%] md:rounded-full md:px-4">
           <img src={logo} alt="brandlogo" className="w-12 object-contain h-12 rounded-full" />
@@ -121,7 +121,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center justify-center space-x-8 text-primary-black bg-white w-[50%] px-6 py-[16px] rounded-4xl font-medium shadow-[0px_10px_20px_0px_rgba(0,_0,_0,_0.15)]">
+        <ul className="hidden lg:flex items-center justify-center space-x-8 text-primary-black bg-white w-[50%] px-6 py-[16px] rounded-4xl font-medium shadow-[0px_10px_20px_0px_rgba(0,_0,_0,_0.15)]">
           <li className="hover:text-gray-200 transition font-notosans-semi-bold">How It Works</li>
           <li className="hover:text-gray-200 transition font-notosans-semi-bold text-color-primary">Pricing</li>
           <li className="hover:text-gray-200 transition font-notosans-semi-bold text-custom-font-size-xl">About Us</li>
@@ -130,7 +130,7 @@ const Navbar = () => {
         {/* User Icon & Mobile Menu */}
         <div className="flex items-center space-x-6">
           <UserDropdown />
-          <button className="md:hidden right-6 rounded-full bg-Earthy-Brown p-4" onClick={() => setIsOpen(true)}>
+          <button className="lg:hidden right-6 rounded-full bg-Earthy-Brown p-4" onClick={() => setIsOpen(true)}>
             <FaBars className="text-white text-2xl cursor-pointer" />
           </button>
         </div>
