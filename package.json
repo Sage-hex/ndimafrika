@@ -15,6 +15,7 @@
     "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/vite": "^4.0.12",
     "aframe": "^1.7.0",
+    "framer-motion": "^12.5.0",
     "postprocessing": "^6.37.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

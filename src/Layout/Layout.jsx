@@ -24,6 +24,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 function Layout() {
   return (
@@ -32,9 +33,7 @@ function Layout() {
       <main className="flex-grow">
         <Outlet />
       </main>
-      <footer className="bg-gray-900 text-white text-center py-4">
-        <p>&copy; {new Date().getFullYear()} My App</p>
-      </footer>
+      <Footer/>
     </div>
   );
 }

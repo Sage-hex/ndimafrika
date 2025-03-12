@@ -72,6 +72,34 @@ const Hero = () => {
           >Enter Library</button>
         </div>
       </div>
+
+       {/* Cloud Divider */}
+       {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="relative block w-[calc(100%+1.3px)] h-[70px]"
+        >
+          <path
+            d="M0,40 C150,90 350,-30 600,40 C850,110 1050,-20 1200,40 L1200,120 L0,120 Z"
+            fill="red"
+          ></path>
+        </svg>
+      </div> */}
+
+      {/* Small Cloud Pieces */}
+      {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+        <svg
+          viewBox="0 0 1200 100"
+          preserveAspectRatio="none"
+          className="relative block w-full h-[90px]"
+        >
+          <path
+            d="M0,60 C100,80 150,40 250,60 C350,80 400,30 500,50 C600,70 650,20 750,50 C850,80 900,40 1000,60 C1100,80 1150,50 1200,70 L1200,100 L0,100 Z"
+            fill="white"
+          ></path>
+        </svg>
+      </div> */}
     </section>
   );
 };
