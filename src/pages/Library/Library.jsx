@@ -334,6 +334,7 @@
 
 
 import { useState } from "react";
+import LibraryHero from "../../components/Hero/LibraryHero";
 
 // Sample Story Data
 const stories = [
@@ -357,6 +358,73 @@ const stories = [
     region: "West Africa",
     type: "Historical",
     vr: false,
+    image: "https://via.placeholder.com/300",
+  },
+  {
+    id: 3,
+    title: "Aare Ona Kakanfo Afonja",
+    description: "The story of a fearless Yoruba warlord.",
+    era: "Pre-Colonial",
+    culture: "Yoruba",
+    region: "West Africa",
+    type: "Folklore",
+    vr: true,
+    image: "https://via.placeholder.com/300",
+  },
+
+  {
+    id: 3,
+    title: "Aare Ona Kakanfo Afonja",
+    description: "The story of a fearless Yoruba warlord.",
+    era: "Pre-Colonial",
+    culture: "Yoruba",
+    region: "West Africa",
+    type: "Folklore",
+    vr: true,
+    image: "https://via.placeholder.com/300",
+  },
+  {
+    id: 3,
+    title: "Aare Ona Kakanfo Afonja",
+    description: "The story of a fearless Yoruba warlord.",
+    era: "Pre-Colonial",
+    culture: "Yoruba",
+    region: "West Africa",
+    type: "Folklore",
+    vr: true,
+    image: "https://via.placeholder.com/300",
+  },
+  {
+    id: 3,
+    title: "Aare Ona Kakanfo Afonja",
+    description: "The story of a fearless Yoruba warlord.",
+    era: "Pre-Colonial",
+    culture: "Yoruba",
+    region: "West Africa",
+    type: "Folklore",
+    vr: true,
+    image: "https://via.placeholder.com/300",
+  },
+  {
+    id: 3,
+    title: "Aare Ona Kakanfo Afonja",
+    description: "The story of a fearless Yoruba warlord.",
+    era: "Pre-Colonial",
+    culture: "Yoruba",
+    region: "West Africa",
+    type: "Folklore",
+    vr: true,
+    image: "https://via.placeholder.com/300",
+  },
+  {
+    id: 3,
+    title: "Aare Ona Kakanfo Afonja",
+    description: "The story of a fearless Yoruba warlord.",
+    era: "Pre-Colonial",
+    culture: "Yoruba",
+    region: "West Africa",
+    type: "Folklore",
+    vr: true,
     image: "https://via.placeholder.com/300",
   },
   {
@@ -403,7 +471,12 @@ const StoryLibrary = () => {
   });
 
   return (
-    <div className="p-6 max-w-6xl mx-auto mt-[20vh]  relative">
+    <>
+
+    <LibraryHero/>
+
+    <div className="w-full ">
+    <div className="p-6 max-w-6xl mx-auto pt-[3rem] relative">
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-center mb-6">
         <h1 className="text-3xl font-bold text-gray-800">Story Library</h1>
@@ -418,7 +491,7 @@ const StoryLibrary = () => {
         />
       </div>
 
-      {/* Filters - Side by Side on Mobile */}
+
     {/* Filters - Side by Side on Mobile */}
 {/* Filters - Responsive */}
 <div className="grid grid-cols-2 gap-4 md:flex md:items-center md:gap-4 mb-6">
@@ -465,7 +538,7 @@ const StoryLibrary = () => {
 
   {/* View Mode Toggle */}
   <button 
-    className="w-full md:w-auto px-4 py-2 text-sm font-semibold bg-gray-200 rounded-md hover:bg-gray-300"
+    className="hidden md:block w-full md:w-auto px-4 py-2 text-[11px] lg:text-sm font-semibold bg-gray-200 rounded-md hover:bg-gray-300"
     onClick={() => setViewMode(viewMode === "grid" ? "list" : "grid")}
   >
     {viewMode === "grid" ? "Switch to List View" : "Switch to Grid View"}
@@ -516,6 +589,8 @@ const StoryLibrary = () => {
         )}
       </div>
     </div>
+    </div>
+    </>
   );
 };
 
