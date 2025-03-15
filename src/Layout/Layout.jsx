@@ -1,54 +1,27 @@
-// import React from 'react';
-// import { Outlet } from 'react-router-dom';
-// import Navbar from '../components/Navbar/Navbar';
-
-// function Layout() {
-//   return (
-//     <div>
-//         <Navbar/>
-//       <main>
-//         <Outlet /> 
-//       </main>
-
-//       <footer>
-//         {/* Your footer content */}
-//         <p>&copy; 2023 My App</p>
-//       </footer>
-//     </div>
-//   );
-// }
-
-// export default Layout;
-
 
 import React, { useMemo } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
-
 function Layout() {
-
-
   const location = useLocation();
 
-  // const specialRoutes = ['/userdashboard','/admin','userLogin','/userSignup'];
+  // Define special routes in a Set (O(1) lookup for exact matches)
+  const specialRoutes = useMemo(() => new Set(['/userdashboard', '/admin', '/userLogin', '/userSignup']), []);
 
-  const specialRoutes = useMemo(() => new Set(['/userdashboard','/admin','userLogin','/userSignup']),[]);
-  const isSpecialRoutes = specialRoutes.has(location.pathname);
-  // const isDashboard = location.pathname.inludes
-
-  // const isDashboard = location.pathname.startsWith('/userdashboard') || location.pathname.startsWith('/admin') ||  location.pathname.startsWith('/userLogin');
+  // Check if the current path starts with any of the special routes
+  const isSpecialRoute = useMemo(() => {
+    return [...specialRoutes].some(route => location.pathname.startsWith(route));
+  }, [location.pathname]);
 
   return (
-    <div className="flex flex-col  min-h-screen">
-    {/* {!isDashboard && <Navbar />} */}
-    {!specialRoutes && <Navbar/>}
-      <main className="flex-grow ">
+    <div className="flex flex-col min-h-screen">
+      {!isSpecialRoute && <Navbar />}
+      <main className="flex-grow">
         <Outlet />
       </main>
-      {/* {!isDashboard && <Footer/>} */}
-      {!specialRoutes && <Footer/>}
+      {!isSpecialRoute && <Footer />}
     </div>
   );
 }

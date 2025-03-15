@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const UserDashboardSidebar = () => {
   return (
-    <div className="w-1/4 bg-[#8B5A2B] text-white p-6">
+    <div className="hidden md:block w-1/4 bg-[#8B5A2B] text-white p-6">
       <h2 className="text-2xl font-bold mb-6">📖 Dashboard Menu</h2>
       <nav className="space-y-4">
         <Link to="/userdashboard" className="block p-2 rounded-lg hover:bg-[#A67B5B]">
@@ -22,6 +22,9 @@ const UserDashboardSidebar = () => {
           ⚙️ Settings
         </Link>
       </nav>
+
+      {/* Mobile Nav */}
+
     </div>
   );
 };
