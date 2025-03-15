@@ -191,10 +191,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header
-      className="fixed top-0 left-0 w-full p-8 z-50 bg-transparent"
-      // style={{ backdropFilter: "blur(10px)" }} // Optional: Adds a frosted glass effect
-    >
+    // <header
+    //   className="fixed top-0 left-0 w-full h-[15vh] py-8  flex flex-col items-center justify-center z-50 "
+    //   style={{ backdropFilter: "blur(10px)" }} // Optional: Adds a frosted glass effect
+    // >
+    <header className="fixed top-0 left-0 w-full h-[15vh] p-8 z-50 bg-gradient-to-r from-[#9C6A44] via-[#E09F3E] to-[#6B4226] shadow-lg backdrop-blur-md">
+
       <nav className="w-full lg:w-[90%] flex justify-between items-center h-[60px] py-2 md:px-6 lg:px-20 mx-auto">
         {/* Logo Section */}
         <div className="flex items-center bg-Earthy-Brown rounded-[50%] md:rounded-full md:px-4">

@@ -3,6 +3,7 @@ import Hero from '../../components/Hero/Hero'
 import FeaturedBook from '../../components/FeaturedBook/FeaturedBook'
 import InfiniteScrollCards from '../../utils/InfiniteScrollCards'
 import HighlightReel from '../../components/HighlightReel/HighlightReel'
+import UserDashboard from '../UserDashboard/UserDashboard'
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <FeaturedBook/>
       <HighlightReel/>
       <InfiniteScrollCards/>
+      {/* <UserDashboard/> */}
       
       
     </section>

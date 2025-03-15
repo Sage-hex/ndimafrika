@@ -22,18 +22,25 @@
 
 
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 
+
 function Layout() {
+
+
+  const location = useLocation();
+
+  const isDashboard = location.pathname.startsWith('/userdashboard') || location.pathname.startsWith('/admin') ||  location.pathname.startsWith('/userLogin');
+
   return (
     <div className="flex flex-col  min-h-screen">
-      <Navbar />
-      <main className="flex-grow">
+    {!isDashboard && <Navbar />}
+      <main className="flex-grow ">
         <Outlet />
       </main>
-      <Footer/>
+      {!isDashboard && <Footer/>}
     </div>
   );
 }

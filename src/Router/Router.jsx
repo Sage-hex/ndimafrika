@@ -6,6 +6,14 @@ import Layout from "../Layout/Layout";
 import Story from "../pages/Story/Story";
 import Scan from "../pages/Scan/Scan";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import UserDashboard from "../pages/UserDashboard/UserDashboard";
+import MyStories from "../pages/UserDashboard/MyStories";
+import Achievements from "../pages/UserDashboard/Achievements";
+import Subscription from "../pages/UserDashboard/Subscription";
+import Settings from "../pages/UserDashboard/Settings";
+import DashboardOverview from "../pages/UserDashboard/DashboardOverview";
+import Login from "../pages/UserLogin/UserLogin";
+import Admin from "../pages/Admin/Admin";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +23,11 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+
+      {
+        path: "/userLogin",
+        element: <Login />,
       },
       {
         path: "/library",
@@ -27,6 +40,54 @@ const router = createBrowserRouter([
       {
         path: "/story",
         element: <Story />,
+      },
+
+      {
+        path:'admin',
+        element:<Admin/>,
+        children: [
+          { index: true, element: <DashboardOverview /> }, 
+          {
+            path: "my-stories",
+            element: <MyStories/>,
+          },
+          {
+            path: "achievements",
+            element: <Achievements />,
+          },
+          {
+            path: "subscription",
+            element: <Subscription />,
+          },
+          {
+            path: "settings",
+            element: <Settings />,
+          },
+        ],
+      },
+
+      {
+        path:'userdashboard',
+        element:<UserDashboard/>,
+        children: [
+          { index: true, element: <DashboardOverview /> }, 
+          {
+            path: "my-stories",
+            element: <MyStories/>,
+          },
+          {
+            path: "achievements",
+            element: <Achievements />,
+          },
+          {
+            path: "subscription",
+            element: <Subscription />,
+          },
+          {
+            path: "settings",
+            element: <Settings />,
+          },
+        ],
       },
       {
         path:"*",
