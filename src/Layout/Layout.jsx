@@ -18,7 +18,7 @@ function Layout() {
   return (
     <div className="flex flex-col min-h-screen">
       {!isSpecialRoute && <Navbar />}
-      <main className="flex-grow">
+      <main className="flex-grow mt[-10vh]">
         <Outlet />
       </main>
       {!isSpecialRoute && <Footer />}
@@ -27,3 +27,23 @@ function Layout() {
 }
 
 export default Layout;
+
+
+// import { Outlet } from "react-router-dom";
+// import Navbar from "../components/Navbar/Navbar";
+// import Footer from "../components/Footer/Footer";
+
+// function Layout() {
+//   return (
+//     <div className="flex flex-col  min-h-screen">
+//       <Navbar />
+//       <main className="flex-grow mt[-10vh]">
+//         <Outlet />
+//       </main>
+//       <Footer/>
+//     </div>
+//   );
+// }
+
+// export default Layout;
+ 
