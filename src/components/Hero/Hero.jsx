@@ -121,10 +121,14 @@ const Hero = () => {
           />
         </div>
         <div className="flex flex-col md:flex-row gap-4 justify-center">
+          {/* <button 
+            className="px-6 py-2 md:px-14 md:py-4 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-600 transition"
+            onClick={() => navigate("/story")}
+          >Explore Story</button> */}
           <button 
             className="px-6 py-2 md:px-14 md:py-4 bg-yellow-500 text-black font-semibold rounded-lg hover:bg-yellow-600 transition"
             onClick={() => navigate("/story")}
-          >Explore Story</button>
+          >Scan Artefact</button>
           <button 
             className="px-6 py-2 md:px-14 md:py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition"
             onClick={() => navigate("/library")}

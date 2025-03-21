@@ -272,10 +272,16 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/NdimAfrika.png";
 import UserDropdown from "../UserDropDown/UserDropDown"; 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    navigate(path);
+
+  }
 
   return (
     <header
@@ -290,10 +296,10 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden lg:flex items-center justify-center space-x-8 text-primary-black bg-white w-[50%] px-6 py-[16px] rounded-4xl font-medium shadow-[0px_10px_20px_0px_rgba(0,_0,_0,_0.15)]">
-          <li className="hover:text-gray-200 transition font-notosans-semi-bold">How It Works</li>
-          <li className="hover:text-gray-200 transition font-notosans-semi-bold text-color-primary">Pricing</li>
-          <li className="hover:text-gray-200 transition font-notosans-semi-bold text-custom-font-size-xl">About Us</li>
+        <ul className="hidden lg:flex items-center justify-center space-x-8 text-primary-black bg-white w-[50%] px-6 py-[16px] cursor-pointer rounded-4xl font-medium shadow-[0px_10px_20px_0px_rgba(0,_0,_0,_0.15)]">
+          <li className="hover:text-gray-200 transition font-notosans-semi-bold" onClick={()=> handleNavigate('/howitworks')}>How It Works</li>
+          <li className="hover:text-gray-200 transition font-notosans-semi-bold text-color-primary" onClick={()=> handleNavigate('/pricing')}>Pricing</li>
+          <li className="hover:text-gray-200 transition font-notosans-semi-bold text-custom-font-size-xl" onClick={()=> handleNavigate('/about')}>About Us</li>
         </ul>
 
         {/* User Icon & Mobile Menu */}

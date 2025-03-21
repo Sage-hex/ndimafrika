@@ -14,6 +14,8 @@ import Settings from "../pages/UserDashboard/Settings";
 import DashboardOverview from "../pages/UserDashboard/DashboardOverview";
 import Login from "../pages/UserLogin/UserLogin";
 import Admin from "../pages/Admin/Admin";
+import About from "../pages/About/About";
+import HowItWorks from "../pages/HowItWorks/HowItWorks";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/story",
         element: <Story />,
+      },
+      {
+        path:'howitworks',
+        element:<HowItWorks/>
       },
 
       {
@@ -88,6 +94,11 @@ const router = createBrowserRouter([
             element: <Settings />,
           },
         ],
+      },
+
+      {
+        path:'about',
+        element:<About/>
       },
       {
         path:"*",
