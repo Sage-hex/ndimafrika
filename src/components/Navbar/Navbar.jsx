@@ -290,8 +290,8 @@ const Navbar = () => {
     >
       <nav className="w-full lg:w-[90%] flex justify-between items-center h-[60px] py-2 md:px-6 lg:px-20 mx-auto">
         {/* Logo Section */}
-        <div className="flex items-center bg-Earthy-Brown rounded-[50%] md:rounded-full md:px-4">
-          <img src={logo} alt="brandlogo" className="w-12 object-contain h-12 rounded-full" />
+        <div className="flex items-center bg-Earthy-Brown rounded-[50%] md:rounded-full md:px-4 cursor-pointer" onClick={()=> handleNavigate('/')}>
+          <img src={logo} alt="brandlogo" className="w-12 object-contain h-12 rounded-full "/>
           <h1 className="text-white hidden md:block text-lg font-bold">NdimAfrika</h1>
         </div>
 
