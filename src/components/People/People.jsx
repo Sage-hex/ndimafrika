@@ -1,6 +1,6 @@
 export default function PeopleComponent() {
     return (
-      <div className="flex flex-col md:flex-row items-start gap-8 p-6">
+      <div className="flex flex-col md:flex-row items-start gap-8 p-6 bg-red-500">
         {/* Left Section - Image */}
         <div className="w-full md:w-1/3">
           <img
