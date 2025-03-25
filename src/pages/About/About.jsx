@@ -64,9 +64,15 @@
 
 
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import PeopleComponent from "../../components/People/People";
+import AboutHero from "../../components/AboutHero/AboutHero";
 
 const AboutPage = () => {
   return (
+
+    <main className="">
+    <AboutHero/>
+    <PeopleComponent/>
     <section className="bg-[#3A2005] text-white min-h-screen flex flex-col items-center p-6 lg:p-12">
       {/* Hero Section */}
       <div className="max-w-5xl text-center">
@@ -128,6 +134,7 @@ const AboutPage = () => {
         <FaQuoteRight className="text-2xl text-white inline-block mt-2" />
       </div>
     </section>
+    </main>
   );
 };
 
