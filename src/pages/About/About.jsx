@@ -67,14 +67,16 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import PeopleComponent from "../../components/People/People";
 import AboutHero from "../../components/About/AboutHero";
 import NdimAfrikaDetails from "../../components/About/Details";
+import FoundersStory from "../../components/About/FounderStory";
 
 const AboutPage = () => {
   return (
 
-    <main className="">
+    <main className="bg-[#121926]">
     <AboutHero/>
-    <PeopleComponent/>
+    {/* <PeopleComponent/> */}
     <NdimAfrikaDetails/>
+    {/* <FoundersStory/> */}
    
     </main>
   );

@@ -8,7 +8,7 @@ import UserDashboard from '../UserDashboard/UserDashboard'
 
 const Home = () => {
   return (
-    <section className='bg-Cream-Beige w-full min-h-screen '>
+    <section className='bg-[#121926] w-full min-h-screen '>
       <Hero/>
       <FeaturedBook/>
       <HighlightReel/>
