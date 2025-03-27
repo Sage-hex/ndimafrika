@@ -290,7 +290,7 @@ const Navbar = () => {
     >
       <nav className="w-full lg:w-[90%] flex justify-between items-center h-[60px] py-2 md:px-6 lg:px-20 mx-auto">
         {/* Logo Section */}
-        <div className="flex items-center bg-Earthy-Brown rounded-[50%] md:rounded-full md:px-4 cursor-pointer" onClick={()=> handleNavigate('/')}>
+        <div className="flex items-center bg-[#FACC15] rounded-[50%] md:rounded-full md:px-4 cursor-pointer" onClick={()=> handleNavigate('/')}>
           <img src={logo} alt="brandlogo" className="w-12 object-contain h-12 rounded-full "/>
           <h1 className="text-white hidden md:block text-lg font-bold">NdimAfrika</h1>
         </div>
@@ -305,7 +305,7 @@ const Navbar = () => {
         {/* User Icon & Mobile Menu */}
         <div className="flex items-center space-x-6">
           <UserDropdown />
-          <button className="lg:hidden right-6 rounded-full bg-Earthy-Brown p-4" onClick={() => setIsOpen(true)}>
+          <button className="lg:hidden right-6 rounded-full bg-[#FACC15] p-4" onClick={() => setIsOpen(true)}>
             <FaBars className="text-white text-2xl cursor-pointer" />
           </button>
         </div>

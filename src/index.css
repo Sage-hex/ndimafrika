@@ -56,14 +56,14 @@
   /* bg-gradient-to-b from-[#2a1a04] to-[#4d2e0e] */
 
   /* Parallax effect */
-  .parallax-bg {
+  /* .parallax-bg {
     position: relative;
     height: auto;
     overflow: hidden;
     background: url("/images/mile2.jpg") no-repeat center center;
     background-size: cover;
-    background-attachment: fixed; /* This is the key for parallax */
+    background-attachment: fixed;
   }
-  
+   */
 
   

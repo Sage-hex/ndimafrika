@@ -52,7 +52,7 @@ function InfiniteScrollCards() {
     });
   
     return (
-      <div ref={containerRef} className="overflow-hidden w-full bg-Earthy-Brown py-20 cursor-grab active:cursor-grabbing">
+      <div ref={containerRef} className="overflow-hidden w-full bg-Earthy-Brown bg-[#121926]  py-20 cursor-grab active:cursor-grabbing">
         
         <motion.div
           className="flex gap-6 min-w-max"

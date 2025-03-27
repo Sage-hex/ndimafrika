@@ -221,8 +221,8 @@ export default function HighlightReel() {
   };
 
   return (
-    <div className="parallax-bg w-full flex flex-col items-center justify-center bg-black p-4">
-      <h2 className="text-4xl md:text-6xl font-bold p-4 mb-6 text-center text-white">
+    <div className="parallax-bg w-full flex flex-col items-center justify-center  p-4">
+      <h2 className="text-4xl md:text-6xl font-bold p-4 mb-6 text-center text-[#FACC15]">
         Highlight Reel
       </h2>
 
