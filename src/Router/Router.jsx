@@ -13,6 +13,7 @@ import Subscription from "../pages/UserDashboard/Subscription";
 import Settings from "../pages/UserDashboard/Settings";
 import DashboardOverview from "../pages/UserDashboard/DashboardOverview";
 import Login from "../pages/UserLogin/UserLogin";
+import Signup from "../pages/UserLogin/UserSignup";
 import Admin from "../pages/Admin/Admin";
 import About from "../pages/About/About";
 import HowItWorks from "../pages/HowItWorks/HowItWorks";
@@ -26,7 +27,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-
+      {
+        path: "/userSignup",
+        element: <Signup/>,
+      },
       {
         path: "/userLogin",
         element: <Login />,
