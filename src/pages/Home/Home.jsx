@@ -4,6 +4,7 @@ import FeaturedBook from '../../components/FeaturedBook/FeaturedBook'
 import InfiniteScrollCards from '../../utils/InfiniteScrollCards'
 import HighlightReel from '../../components/HighlightReel/HighlightReel'
 import UserDashboard from '../UserDashboard/UserDashboard'
+import AdminDashboard from '../Admin/Admin'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <HighlightReel/>
       <InfiniteScrollCards/>
       {/* <UserDashboard/> */}
+      <AdminDashboard/>
       
       
     </section>
