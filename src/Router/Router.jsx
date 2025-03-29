@@ -17,6 +17,7 @@ import Signup from "../pages/UserLogin/UserSignup";
 import Admin from "../pages/Admin/Admin";
 import About from "../pages/About/About";
 import HowItWorks from "../pages/HowItWorks/HowItWorks";
+import AdminLogin from "../pages/AdminLogin/AdminLogin";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/userLogin",
         element: <Login />,
+      },
+      {
+        path: "/adminLogin",
+        element: <AdminLogin />,
       },
       {
         path: "/library",
@@ -55,25 +60,25 @@ const router = createBrowserRouter([
       {
         path:'admin',
         element:<Admin/>,
-        children: [
-          { index: true, element: <DashboardOverview /> }, 
-          {
-            path: "my-stories",
-            element: <MyStories/>,
-          },
-          {
-            path: "achievements",
-            element: <Achievements />,
-          },
-          {
-            path: "subscription",
-            element: <Subscription />,
-          },
-          {
-            path: "settings",
-            element: <Settings />,
-          },
-        ],
+        // children: [
+        //   { index: true, element: <DashboardOverview /> }, 
+        //   {
+        //     path: "my-stories",
+        //     element: <MyStories/>,
+        //   },
+        //   {
+        //     path: "achievements",
+        //     element: <Achievements />,
+        //   },
+        //   {
+        //     path: "subscription",
+        //     element: <Subscription />,
+        //   },
+        //   {
+        //     path: "settings",
+        //     element: <Settings />,
+        //   },
+        // ],
       },
 
       {
