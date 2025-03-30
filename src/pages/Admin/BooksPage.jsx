@@ -48,14 +48,14 @@ export default function BooksPage({ onNavigate }) {
   };
 
   return (
-    <div className="p-6">
+    <div className="pt-8 p-2 md:p-6">
       <h2 className="text-2xl font-bold mb-4">📖 Published Books</h2>
-      <ul className="bg-white p-6 rounded-lg shadow-lg divide-y divide-gray-300">
+      <ul className="bg-white p-2 md:p-6 rounded-lg shadow-lg divide-y divide-gray-300">
         {books.map((book) => (
           <li key={book.id} className="p-3 flex justify-between items-center">
             {book.title}
             <button
-              className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+              className="md:px-4 md:py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
               onClick={() => deleteBook(book.id)}
             >
               ❌ Remove

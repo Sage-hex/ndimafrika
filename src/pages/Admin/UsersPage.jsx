@@ -11,9 +11,9 @@ export default function UsersPage() {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-2 md:p-6">
       <h2 className="text-2xl font-bold mb-4">👥 Manage Users</h2>
-      <ul className="bg-white p-6 rounded-lg shadow-lg divide-y divide-gray-300">
+      <ul className=" bg-white  md:p-6 rounded-lg shadow-lg divide-y divide-gray-300">
         {users.map((user) => (
           <li key={user.id} className="p-3 flex justify-between items-center">
             {user.name} - {user.subscription}

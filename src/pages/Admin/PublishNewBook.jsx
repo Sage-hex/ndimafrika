@@ -29,7 +29,7 @@ export default function PublishNewBook() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <div className="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg">
       <h2 className="text-2xl font-bold mb-4">📖 Publish New Book</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Book Form */}
@@ -60,7 +60,7 @@ export default function PublishNewBook() {
           </button>
         </div>
         {/* Preview Section */}
-        <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+        <div className="bg-gray-100 p-2 md:p-6 rounded-lg shadow-md">
           <h3 className="text-xl font-semibold mb-4">📚 Preview</h3>
           <div className="border p-4 rounded-lg bg-white shadow-sm">
             {preview ? (

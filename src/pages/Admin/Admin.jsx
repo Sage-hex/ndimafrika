@@ -99,9 +99,67 @@
 
 
 
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Sidebar from "./Sidebar";
+// import { useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+// import Sidebar from "./Sidebar";
+// import UsersPage from "./UsersPage";
+// import BooksPage from "./BooksPage";
+// import ReportsPage from "./ReportsPage";
+// import PublishNewBook from "./PublishNewBook";
+// import DashboardOverview from "./DashboardOverview";
+
+// export default function AdminDashboard() {
+//   const [activeTab, setActiveTab] = useState("dashboard");
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
+//   const [userName, setUserName] = useState("");
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     // Check if admin is logged in
+//     const loggedIn = localStorage.getItem("isLoggedIn");
+//     if (loggedIn === "true") {
+//       setIsLoggedIn(true);
+//       setUserName(localStorage.getItem("userName"));
+//     } else {
+//       navigate("/adminLogin"); // Redirect to login page if not logged in
+//     }
+//   }, [navigate]);
+
+//   const handleLogout = () => {
+//     localStorage.removeItem("isLoggedIn");
+//     localStorage.removeItem("userName");
+//     setIsLoggedIn(false);
+//     navigate("/adminLogin");
+//   };
+
+//   return (
+//     <div className="flex min-h-screen bg-[#f4f1ea]">
+//       {/* Sidebar */}
+//       <Sidebar
+//         activeTab={activeTab}
+//         setActiveTab={setActiveTab}
+//         isLoggedIn={isLoggedIn}
+//         userName={userName}
+//         onLogout={handleLogout}
+        
+//       />
+
+//       {/* Main Content */}
+//       <main className="flex-1 p-6">
+//         {activeTab === "dashboard" && <DashboardOverview onNavigate={setActiveTab} />}
+//         {activeTab === "users" && <UsersPage />}
+//         {activeTab === "books" && <BooksPage onNavigate={setActiveTab} />}
+//         {activeTab === "reports" && <ReportsPage />}
+//         {activeTab === "publish" && <PublishNewBook />}
+//       </main>
+//     </div>
+//   );
+// }
+
+
+
+import { useState } from "react";
+import Sidebar from "./Sidebar"; // Import the Sidebar component
 import UsersPage from "./UsersPage";
 import BooksPage from "./BooksPage";
 import ReportsPage from "./ReportsPage";
@@ -110,26 +168,12 @@ import DashboardOverview from "./DashboardOverview";
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("dashboard");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userName, setUserName] = useState("");
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Check if admin is logged in
-    const loggedIn = localStorage.getItem("isLoggedIn");
-    if (loggedIn === "true") {
-      setIsLoggedIn(true);
-      setUserName(localStorage.getItem("userName"));
-    } else {
-      navigate("/adminLogin"); // Redirect to login page if not logged in
-    }
-  }, [navigate]);
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // Assume admin is logged in
+  const [userName, setUserName] = useState("John Doe");
 
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("userName");
     setIsLoggedIn(false);
-    navigate("/adminLogin");
+    // Add logout logic here (e.g., clear local storage, redirect to login page)
   };
 
   return (
@@ -141,11 +185,10 @@ export default function AdminDashboard() {
         isLoggedIn={isLoggedIn}
         userName={userName}
         onLogout={handleLogout}
-        
       />
 
       {/* Main Content */}
-      <main className="flex-1 p-6">
+      <main className="flex-1 p-6 overflow-hidden">
         {activeTab === "dashboard" && <DashboardOverview onNavigate={setActiveTab} />}
         {activeTab === "users" && <UsersPage />}
         {activeTab === "books" && <BooksPage onNavigate={setActiveTab} />}
