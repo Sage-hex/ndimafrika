@@ -72,7 +72,7 @@ import FoundersStory from "../../components/About/FounderStory";
 const AboutPage = () => {
   return (
 
-    <main className="bg-[#121926]">
+    <main className="bg-[#121926] pt-17 md:p-0">
     <AboutHero/>
     {/* <PeopleComponent/> */}
     <NdimAfrikaDetails/>

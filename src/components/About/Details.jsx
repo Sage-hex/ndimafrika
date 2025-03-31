@@ -49,14 +49,14 @@
 const NdimAfrikaDetails = () => {
   return (
     <section className="bg-[#121926] text-white py-16 px-6 lg:px-24">
-      <div className="max-w-6xl mx-auto text-center lg:text-left">
+      <div className="max-w-6xl mx-auto text-left md:text-center lg:text-left">
         <h2 className="text-4xl font-bold text-[#FACC15]">About NdimAfrika</h2>
-        <p className="mt-4 text-lg text-gray-200">
+        <p className="mt-4 md:text-lg text-gray-200">
           NdimAfrika is a groundbreaking digital library committed to preserving and celebrating Africa’s diverse
           cultures, histories, and storytelling traditions. Through an immersive and interactive platform, we provide
           access to a vast collection of literature, oral traditions, historical texts, and modern African narratives.
         </p>
-        <p className="mt-4 text-lg text-gray-200">
+        <p className="mt-4 md:text-lg text-gray-200">
           Our mission is to bridge the gap between traditional storytelling and digital accessibility, ensuring that 
           African stories reach a global audience while keeping their authenticity and cultural significance intact.
         </p>

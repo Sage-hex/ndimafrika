@@ -23,7 +23,7 @@ const FeaturedBook = ({title,text,images}) => {
       <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-center gap-6 w-[90%] max-w-[1200px]">
         
         {/* Card 1 */}
-        <div className="w-full md:w-[95%] lg:w-[35%]  bg-white rounded-lg shadow-md border-5 border-Earthy-Brown flex flex-col justify-between hover:shadow-lg transition transform hover:scale-105" data-aos="fade-right">
+        <div className="w-full md:w-[95%] lg:w-[35%]  bg-white rounded-lg shadow-md border-5 border-Earthy-Brown flex flex-col justify-between hover:shadow-lg transition transform hover:scale-105"  data-aos='fade-up'>
           <div className="p-5 flex flex-col gap-4 flex-grow">
             <FaStarAndCrescent size={24} className="text-orange-500" />
             <h2 className="text-xl font-semibold">Start Selling</h2>
@@ -53,7 +53,7 @@ const FeaturedBook = ({title,text,images}) => {
         </div>
 
         {/* Card 3 */}
-        <div className="w-full md:w-[95%] lg:w-[35%] bg-white rounded-lg shadow-md border-5 border-Earthy-Brown hover:shadow-lg transition transform hover:scale-105 flex flex-col justify-between"  data-aos="fade-left">
+        <div className="w-full md:w-[95%] lg:w-[35%] bg-white rounded-lg shadow-md border-5 border-Earthy-Brown hover:shadow-lg transition transform hover:scale-105 flex flex-col justify-between"   data-aos='fade-up'>
           <div className="p-5 flex flex-col gap-4 flex-grow">
             <PiStarOfDavidDuotone size={24} className="text-blue-500" />
             <h2 className="text-xl font-semibold">Behind the Scenes</h2>
