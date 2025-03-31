@@ -358,7 +358,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/NdimAfrika.png";
-import UserDropdown from "../UserDropDown/UserDropDown";
+import UserDropdown from '../UserDropdown/UserDropdown';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
