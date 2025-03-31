@@ -16,8 +16,8 @@ const Home = () => {
       <HighlightReel/>
       <InfiniteScrollCards/>
       {/* <UserDashboard/> */}
-      <AdminDashboard/>
-      <PublishNewBook/>
+      {/* <AdminDashboard/>
+      <PublishNewBook/> */}
       
       
     </section>

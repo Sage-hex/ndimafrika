@@ -60,22 +60,61 @@
 
 
 
+// import { Scrollbar } from "react-scrollbars-custom";
+// import { useEffect, useState } from "react";
+
+// const CustomScrollbar = ({ children }) => {
+//   const [thumbSize, setThumbSize] = useState("10px"); // Default width
+
+// //   useEffect(() => {
+// //     const handleResize = () => {
+// //       setThumbSize(window.innerWidth < 768 ? "5px" : "10px"); // Smaller on mobile
+// //     };
+
+// //     handleResize(); // Set on mount
+// //     window.addEventListener("resize", handleResize);
+
+// //     return () => window.removeEventListener("resize", handleResize);
+// //   }, []);
+
+//   return (
+//     <Scrollbar
+//       style={{ width: "100%", height: "100vh" }}
+//       thumbYProps={{
+//         style: {
+//           background: "linear-gradient(180deg, red, orange, yellow, green, blue, indigo, violet)", 
+//           width: thumbSize, 
+//           borderRadius: "0px", // No rounded edges
+//         },
+//       }}
+//       trackYProps={{
+//         style: {
+//           background: "rgba(0, 0, 0, 0.5)", 
+//           width: thumbSize, 
+//           borderRadius: "0px", // Square shape
+//         },
+//       }}
+//     >
+//       {children}
+//     </Scrollbar>
+//   );
+// };
+
+// export default CustomScrollbar;
+
+
+
 import { Scrollbar } from "react-scrollbars-custom";
 import { useEffect, useState } from "react";
 
 const CustomScrollbar = ({ children }) => {
-  const [thumbSize, setThumbSize] = useState("10px"); // Default width
+  const [isMounted, setIsMounted] = useState(false);
 
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setThumbSize(window.innerWidth < 768 ? "5px" : "10px"); // Smaller on mobile
-//     };
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-//     handleResize(); // Set on mount
-//     window.addEventListener("resize", handleResize);
-
-//     return () => window.removeEventListener("resize", handleResize);
-//   }, []);
+  if (!isMounted) return <>{children}</>;
 
   return (
     <Scrollbar
@@ -83,15 +122,15 @@ const CustomScrollbar = ({ children }) => {
       thumbYProps={{
         style: {
           background: "linear-gradient(180deg, red, orange, yellow, green, blue, indigo, violet)", 
-          width: thumbSize, 
-          borderRadius: "0px", // No rounded edges
+          width: "10px",
+          borderRadius: "0px",
         },
       }}
       trackYProps={{
         style: {
-          background: "rgba(0, 0, 0, 0.5)", 
-          width: thumbSize, 
-          borderRadius: "0px", // Square shape
+          background: "rgba(0, 0, 0, 0.5)",
+          width: "10px",
+          borderRadius: "0px",
         },
       }}
     >

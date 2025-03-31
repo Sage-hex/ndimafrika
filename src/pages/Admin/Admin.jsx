@@ -158,42 +158,107 @@
 
 
 
-import { useState } from "react";
-import Sidebar from "./Sidebar"; // Import the Sidebar component
-import UsersPage from "./UsersPage";
-import BooksPage from "./BooksPage";
-import ReportsPage from "./ReportsPage";
-import PublishNewBook from "./PublishNewBook";
+// import { useState } from "react";
+// import Sidebar from "./Sidebar"; // Import the Sidebar component
+// import UsersPage from "./UsersPage";
+// import BooksPage from "./BooksPage";
+// import ReportsPage from "./ReportsPage";
+// import PublishNewBook from "./PublishNewBook";
+// import DashboardOverview from "./DashboardOverview";
+
+// export default function AdminDashboard() {
+//   const [activeTab, setActiveTab] = useState("dashboard");
+//   const [isLoggedIn, setIsLoggedIn] = useState(true); // Assume admin is logged in
+//   const [userName, setUserName] = useState("John Doe");
+
+//   const handleLogout = () => {
+//     setIsLoggedIn(false);
+//     // Add logout logic here (e.g., clear local storage, redirect to login page)
+//   };
+
+//   return (
+//     <div className="flex min-h-screen bg-[#f4f1ea]">
+//       {/* Sidebar */}
+//       <Sidebar
+//         activeTab={activeTab}
+//         setActiveTab={setActiveTab}
+//         isLoggedIn={isLoggedIn}
+//         userName={userName}
+//         onLogout={handleLogout}
+//       />
+
+//       {/* Main Content */}
+//       <main className="flex-1 p-6 overflow-hidden">
+//         {activeTab === "dashboard" && <DashboardOverview onNavigate={setActiveTab} />}
+//         {activeTab === "users" && <UsersPage />}
+//         {activeTab === "books" && <BooksPage onNavigate={setActiveTab} />}
+//         {activeTab === "reports" && <ReportsPage />}
+//         {activeTab === "publish" && <PublishNewBook />}
+//       </main>
+//     </div>
+//   );
+// }
+
+
+// import { useState } from "react";
+// import Sidebar from "./Sidebar"; // Import the Sidebar component
+// import UsersPage from "./UsersPage";
+// import BooksPage from "./BooksPage";
+// import ReportsPage from "./ReportsPage";
+// import PublishNewBook from "./PublishNewBook";
+// import DashboardOverview from "./DashboardOverview";
+
+// export default function AdminDashboard() {
+//   const [activeTab, setActiveTab] = useState("dashboard");
+//   const [isLoggedIn, setIsLoggedIn] = useState(true); // Assume admin is logged in
+//   const [userName, setUserName] = useState("John Doe");
+
+//   const handleLogout = () => {
+//     setIsLoggedIn(false);
+//     // Add logout logic here (e.g., clear local storage, redirect to login page)
+//   };
+
+//   return (
+//     <div className="flex min-h-screen bg-[#f4f1ea]">
+//       {/* Sidebar */}
+//       <Sidebar
+//         activeTab={activeTab}
+//         setActiveTab={setActiveTab}
+//         isLoggedIn={isLoggedIn}
+//         userName={userName}
+//         onLogout={handleLogout}
+//       />
+
+//       {/* Main Content */}
+//       <main className="flex-1 p-6 overflow-hidden">
+//         {activeTab === "dashboard" && <DashboardOverview />}
+//         {activeTab === "users" && <UsersPage />}
+//         {activeTab === "books" && <BooksPage />}
+//         {activeTab === "reports" && <ReportsPage />}
+//         {activeTab === "publish" && <PublishNewBook />}
+//       </main>
+//     </div>
+//   );
+// }
+
+
+import { useLocation } from "react-router-dom";
+import Sidebar from "./Sidebar";
+import HamburgerMenu from "./HamburgerMenu";
 import DashboardOverview from "./DashboardOverview";
 
-export default function AdminDashboard() {
-  const [activeTab, setActiveTab] = useState("dashboard");
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // Assume admin is logged in
-  const [userName, setUserName] = useState("John Doe");
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-    // Add logout logic here (e.g., clear local storage, redirect to login page)
-  };
+export default function Admin() {
+  const location = useLocation();
+  const isAdminPage = location.pathname === "/admin";
 
   return (
     <div className="flex min-h-screen bg-[#f4f1ea]">
-      {/* Sidebar */}
-      <Sidebar
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        isLoggedIn={isLoggedIn}
-        userName={userName}
-        onLogout={handleLogout}
-      />
+      <Sidebar />
 
-      {/* Main Content */}
+      {isAdminPage && <HamburgerMenu />} {/* This ensures it's only on /admin */}
+
       <main className="flex-1 p-6 overflow-hidden">
-        {activeTab === "dashboard" && <DashboardOverview onNavigate={setActiveTab} />}
-        {activeTab === "users" && <UsersPage />}
-        {activeTab === "books" && <BooksPage onNavigate={setActiveTab} />}
-        {activeTab === "reports" && <ReportsPage />}
-        {activeTab === "publish" && <PublishNewBook />}
+        <DashboardOverview />
       </main>
     </div>
   );

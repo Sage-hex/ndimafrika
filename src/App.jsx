@@ -11,7 +11,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 2000, once:true, offset:50,mirror:false, });
 
     // Simulate loading (replace with actual logic if needed)
     setTimeout(() => {
@@ -24,9 +24,9 @@ const App = () => {
       {loading ? (
         <Preloader />
       ) : (
-        <CustomScrollbar>
+        // <CustomScrollbar>
           <RouterProvider router={router} />
-        </CustomScrollbar>
+        //  </CustomScrollbar>
       )}
     </>
   );
