@@ -37,6 +37,9 @@ const images = [
 //     );
 //   }
 
+
+
+
 function InfiniteScrollCards() {
     const x = useMotionValue(0);
     const baseVelocity = -2; // Speed of movement
@@ -63,8 +66,8 @@ function InfiniteScrollCards() {
         >
           {[...images, ...images].map((src, index) => (
             <div key={index} className="w-[300px] flex-shrink-0">
-              <img src={src} alt={`Slide ${index}`} className="rounded-xl w-full h-auto" />
-            </div>
+            <img src={src} alt={`Slide ${index}`} className="rounded-xl w-full h-auto shadow-lg" />
+          </div>
           ))}
 
           
